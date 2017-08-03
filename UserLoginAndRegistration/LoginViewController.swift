@@ -39,11 +39,11 @@ class LoginViewController: UIViewController {
                     print(json)
                     
                    if let myjson = json  as? NSDictionary{
-                        var result : String = (myjson [ "value"] as? String)!
+                        let result : String = (myjson [ "value"] as? String)!
                         if result == "true" {
                             UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
                             UserDefaults.standard.synchronize()
-                            var myAlert = UIAlertController(title: "Alert", message: "Registeration succefully done ", preferredStyle: .alert)
+                            let myAlert = UIAlertController(title: "Alert", message: "Registeration succefully done ", preferredStyle: .alert)
                             let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default){ action in
                                 self.dismiss(animated: true , completion: nil)
                             }
@@ -60,8 +60,10 @@ class LoginViewController: UIViewController {
                 }
                 
             
-        };session.resume()
-    }
+            }
+        }
+            session.resume()
+    
     }
     
     func displayMyAlertMessage (userMessage: String){
