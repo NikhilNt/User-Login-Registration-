@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func viewDidAppear(_ animated: Bool) {
+        
+               if (!isUserLoggedIn)
+        {
+        self.performSegue(withIdentifier: "SegueToLoginView", sender: self)
+    }
 }
-
+}

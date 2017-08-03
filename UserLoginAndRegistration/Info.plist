@@ -34,6 +34,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>SMPrivilegedExecutables</key>
+	<dict/>
+	<key>APP Transport Security Settings</key>
+	<dict>
+		<key>Allow Arbitrary loads</key>
+		<true/>
+	</dict>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
